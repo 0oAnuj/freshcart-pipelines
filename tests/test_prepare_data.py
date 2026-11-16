@@ -7,3 +7,10 @@ def test_split_is_80_20():
 
     assert (out["split"] == "train").sum() == 120
     assert (out["split"] == "test").sum() == 30
+
+
+def test_prepare_data_preserves_all_rows():
+    df = load_iris(as_frame=True).frame
+    out = prepare_data(df)
+
+    assert len(out) == len(df)
