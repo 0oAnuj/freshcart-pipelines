@@ -21,3 +21,10 @@ def test_prepare_data_assigns_only_train_and_test_labels():
     out = prepare_data(df)
 
     assert set(out["split"]) == {"train", "test"}
+
+
+def test_prepare_data_split_labels_are_non_empty():
+    df = load_iris(as_frame=True).frame
+    out = prepare_data(df)
+
+    assert out["split"].notna().all()
