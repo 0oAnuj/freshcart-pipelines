@@ -1,0 +1,6 @@
+mage-ai
+pandas
+scikit-learn
+pytest
+pika
+snowflake-connector-python
