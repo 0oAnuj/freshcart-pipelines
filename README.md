@@ -20,3 +20,5 @@ Run a stream driver with:
 ```powershell
 python stream/driver.py Ravi "bangalore.koramangala.*"
 ```
+
+The CI workflow runs the test suite on every push and pull request.
